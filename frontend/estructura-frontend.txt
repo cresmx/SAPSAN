@@ -1,0 +1,74 @@
+.
+├── README.md
+├── dist
+│   ├── assets
+│   │   └── index-DXj2MNNi.js
+│   ├── index.html
+│   └── vite.svg
+├── eslint.config.js
+├── estructura-frontend.txt
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│   └── vite.svg
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── api
+│   │   └── client.js
+│   ├── assets
+│   │   └── react.svg
+│   ├── auth
+│   │   ├── AuthContext.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   └── RoleGuard.jsx
+│   ├── components
+│   │   ├── common
+│   │   ├── facturas
+│   │   │   └── index.jsx
+│   │   ├── layout
+│   │   │   └── Dashboard.jsx
+│   │   ├── mediciones
+│   │   │   └── index.jsx
+│   │   ├── medidores
+│   │   │   └── index.jsx
+│   │   ├── reportes
+│   │   └── usuarios
+│   │       └── index.jsx
+│   ├── context
+│   │   └── AuthContext.jsx
+│   ├── hooks
+│   │   └── useApi.js
+│   ├── index.css
+│   ├── layout
+│   │   ├── AppLayout.jsx
+│   │   └── DashboardLayout.jsx
+│   ├── main.jsx
+│   ├── pages
+│   │   ├── CapturaMediciones.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Domicilios.jsx
+│   │   ├── FacturacionPagos.jsx
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Medidores.jsx
+│   │   ├── NotFound.jsx
+│   │   ├── Reportes.jsx
+│   │   └── Usuarios.jsx
+│   ├── router
+│   ├── services
+│   │   ├── api.js
+│   │   ├── authService.js
+│   │   ├── facturaService.js
+│   │   ├── medicionService.js
+│   │   └── userService.js
+│   └── utils
+│       ├── constants.js
+│       ├── formatters.js
+│       └── validators.js
+├── tailwind.config.js
+└── vite.config.js
+
+23 directories, 49 files
