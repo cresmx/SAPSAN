@@ -1,0 +1,28 @@
+                                                        Table "public.mediciones"
+      Column      |            Type             | Collation | Nullable |                             Default                              
+------------------+-----------------------------+-----------+----------+------------------------------------------------------------------
+ id               | integer                     |           | not null | nextval('mediciones_id_seq'::regclass)
+ medidor_id       | integer                     |           |          | 
+ lectura_anterior | numeric(10,2)               |           | not null | 
+ lectura_actual   | numeric(10,2)               |           | not null | 
+ consumo          | numeric(10,2)               |           |          | generated always as ((lectura_actual - lectura_anterior)) stored
+ periodo          | character varying(7)        |           | not null | 
+ fecha_lectura    | date                        |           | not null | 
+ observaciones    | text                        |           |          | 
+ leido_por        | character varying(100)      |           |          | 
+ created_at       | timestamp without time zone |           |          | CURRENT_TIMESTAMP
+ domicilio_id     | integer                     |           |          | 
+ foto_url         | character varying(255)      |           |          | 
+ gps_lat          | numeric(10,6)               |           |          | 
+ gps_lng          | numeric(10,6)               |           |          | 
+ manzana          | character varying(20)       |           |          | 
+Indexes:
+    "mediciones_pkey" PRIMARY KEY, btree (id)
+    "idx_mediciones_medidor" btree (medidor_id)
+    "idx_mediciones_periodo" btree (periodo)
+Foreign-key constraints:
+    "mediciones_domicilio_id_fkey" FOREIGN KEY (domicilio_id) REFERENCES domicilios(id) ON DELETE CASCADE
+    "mediciones_medidor_id_fkey" FOREIGN KEY (medidor_id) REFERENCES medidores(id) ON DELETE CASCADE
+Referenced by:
+    TABLE "facturas" CONSTRAINT "facturas_medicion_id_fkey" FOREIGN KEY (medicion_id) REFERENCES mediciones(id)
+

@@ -1,0 +1,150 @@
+.
+├── backend
+│   ├── Makefile
+│   ├── README.md
+│   ├── cleanup_test_data.sql
+│   ├── cleanup_test_users.sql
+│   ├── config
+│   │   ├── init-db.sql
+│   │   ├── seed-data.sql
+│   │   └── sequelize.js
+│   ├── controllers
+│   │   ├── authController.js
+│   │   ├── domiciliosController.js
+│   │   ├── facturasController.js
+│   │   ├── medicionesController.js
+│   │   ├── medidoresController.js
+│   │   ├── pagosController.js
+│   │   ├── reportesController.js
+│   │   └── userController.js
+│   ├── database.js.bak
+│   ├── ecosystem.config.cjs
+│   ├── generar-hash.js
+│   ├── get-tokens.js
+│   ├── healthcheck.sh
+│   ├── index.js
+│   ├── med.txt
+│   ├── middleware
+│   │   ├── auditoria.js
+│   │   ├── authMiddleware.js
+│   │   ├── errorHandler.js
+│   │   ├── logger.js
+│   │   └── roleMiddleware.js
+│   ├── models
+│   │   ├── Factura.js
+│   │   ├── Medicion.js
+│   │   ├── Medidor.js
+│   │   ├── Usuario.js
+│   │   ├── UsuarioSistema.js
+│   │   └── index.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   ├── auth.js
+│   │   ├── domicilios.js
+│   │   ├── facturas.js
+│   │   ├── healthRoutes.js
+│   │   ├── mediciones.js
+│   │   ├── medidores.js
+│   │   ├── pagos.js
+│   │   ├── reportes.js
+│   │   ├── reportesRoutes.js
+│   │   └── users.js
+│   ├── run-tests.sh
+│   ├── scripts
+│   │   └── deploy.sh
+│   ├── seedAdmin.js
+│   ├── seedUser.js
+│   ├── server.js
+│   ├── services
+│   ├── test-db.js
+│   ├── test-endpoints-extended.js
+│   ├── test-endpoints.js
+│   ├── tests
+│   │   ├── integration
+│   │   └── unit
+│   ├── uploads
+│   │   └── mediciones
+│   │       └── 1761144866331-761402732.png
+│   ├── utils
+│   │   ├── constants.js
+│   │   ├── helpers.js
+│   │   └── validateQuery.js
+│   ├── verify_dashboard.sql
+│   ├── verify_facturas.sql
+│   ├── verify_full.sql
+│   ├── verify_medidores.sql
+│   └── verify_periodos.sql
+├── estructura_completa.txt
+├── frontend
+│   ├── README.md
+│   ├── dist
+│   │   ├── assets
+│   │   │   └── index-CkPnlQ6I.js
+│   │   ├── index.html
+│   │   └── vite.svg
+│   ├── eslint.config.js
+│   ├── estructura-frontend.txt
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   └── vite.svg
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── api
+│   │   │   └── client.js
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── auth
+│   │   │   ├── AuthContext.jsx
+│   │   │   ├── ProtectedRoute.jsx
+│   │   │   └── RoleGuard.jsx
+│   │   ├── components
+│   │   │   ├── ErrorBoundary.jsx
+│   │   │   ├── common
+│   │   │   ├── facturas
+│   │   │   │   └── index.jsx
+│   │   │   ├── mediciones
+│   │   │   │   └── index.jsx
+│   │   │   ├── medidores
+│   │   │   │   └── index.jsx
+│   │   │   ├── reportes
+│   │   │   └── usuarios
+│   │   │       └── index.jsx
+│   │   ├── hooks
+│   │   │   └── useApi.js
+│   │   ├── index.css
+│   │   ├── layout
+│   │   │   ├── AppLayout.jsx
+│   │   │   └── DashboardLayout.jsx
+│   │   ├── main.jsx
+│   │   ├── pages
+│   │   │   ├── CapturaMediciones.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Domicilios.jsx
+│   │   │   ├── FacturacionPagos.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Medidores.jsx
+│   │   │   ├── NotFound.jsx
+│   │   │   ├── Reportes.jsx
+│   │   │   └── Usuarios.jsx
+│   │   ├── services
+│   │   │   ├── api.js
+│   │   │   ├── authService.js
+│   │   │   ├── facturaService.js
+│   │   │   ├── medicionService.js
+│   │   │   └── userService.js
+│   │   └── utils
+│   │       ├── constants.js
+│   │       ├── formatters.js
+│   │       └── validators.js
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── logs
+├── setup-project.sh
+└── setup-project.sh.txt
+
+36 directories, 112 files
