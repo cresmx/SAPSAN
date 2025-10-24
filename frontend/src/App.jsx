@@ -20,79 +20,68 @@ export default function App() {
   return (
     <ErrorBoundary>
       <Routes>
-        {
-      <Routes>
-      <Route path="/login" element={<Login />} />
-
-      <Route
-        path="/"
-        element={
-          <ProtectedRoute>
-            <AppLayout />
-          </ProtectedRoute>
-        }
-      >
-        <Route index element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
 
         <Route
-          path="usuarios"
+          path="/"
           element={
-            <RoleGuard roles={["admin"]}>
-              <Usuarios />
-            </RoleGuard>
+            <ProtectedRoute>
+              <AppLayout />
+            </ProtectedRoute>
           }
-        />
+        >
+          <Route index element={<Dashboard />} />
 
-        <Route
-          path="captura"
-          element={
-            <RoleGuard roles={["capturista", "admin"]}>
-              <CapturaMediciones />
-            </RoleGuard>
-          }
-        />
-
-        <Route
-          path="caja"
-          element={
-            <RoleGuard roles={["cajero", "admin"]}>
-              <FacturacionPagos />
-            </RoleGuard>
-          }
-        />
-
-        <Route
-          path="reportes"
-          element={
-            <RoleGuard roles={["supervisor", "admin"]}>
-              <Reportes />
-            </RoleGuard>
-          }
-        />
-
-        <Route path="*" element={<NotFound />} />
-      </Route>
-
-      <Route
-  path="domicilios"
-  element={
-    <RoleGuard roles={["admin", "supervisor"]}>
-      <Domicilios />
-    </RoleGuard>
-  }
-/>
-
-<Route
-  path="medidores"
-  element={
-    <RoleGuard roles={["admin", "supervisor"]}>
-      <Medidores />
-    </RoleGuard>
-  }
-/>
-    </Routes>
-      
-      }
+          <Route
+            path="usuarios"
+            element={
+              <RoleGuard roles={["admin"]}>
+                <Usuarios />
+              </RoleGuard>
+            }
+          />
+          <Route
+            path="captura"
+            element={
+              <RoleGuard roles={["capturista", "admin"]}>
+                <CapturaMediciones />
+              </RoleGuard>
+            }
+          />
+          <Route
+            path="caja"
+            element={
+              <RoleGuard roles={["cajero", "admin"]}>
+                <FacturacionPagos />
+              </RoleGuard>
+            }
+          />
+          <Route
+            path="reportes"
+            element={
+              <RoleGuard roles={["supervisor", "admin"]}>
+                <Reportes />
+              </RoleGuard>
+            }
+          />
+          <Route
+            path="domicilios"
+            element={
+              <RoleGuard roles={["admin", "supervisor"]}>
+                <Domicilios />
+              </RoleGuard>
+            }
+          />
+          <Route
+            path="medidores"
+            element={
+              <RoleGuard roles={["admin", "supervisor"]}>
+                <Medidores />
+              </RoleGuard>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </ErrorBoundary>
   );
